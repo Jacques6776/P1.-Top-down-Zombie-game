@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,7 +15,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float walkingMoveSpeed = 5f;
     [SerializeField] float sprintingMoveSpeed = 10f;
     float currentSpeed;
-    Vector2 move;    
+    Vector2 move;
+
+    //private InputAction fire;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -30,6 +33,11 @@ public class PlayerController : MonoBehaviour
     {
         joystickLook = context.ReadValue<Vector2>();
     }
+
+    //public void Fire(InputAction.CallbackContext context)
+    //{
+        //Debug.Log("Pew");
+    //}
 
     void Start() 
     {
