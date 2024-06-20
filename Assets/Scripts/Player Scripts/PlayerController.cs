@@ -17,7 +17,26 @@ public class PlayerController : MonoBehaviour
     float currentSpeed;
     Vector2 move;
 
-    //private InputAction fire;
+    private InputAction fire;
+
+    public PlayerInputManager playerControls;
+
+    void Awake() 
+    {
+        playerControls = new PlayerInputManager();
+    }
+
+    void OnEnable() 
+    {
+        fire = playerControls.Player.Fire;
+        fire.Enable();
+        fire.performed += Fire;
+    }
+
+    void OnDisable() 
+    {
+        fire.Disable();
+    }
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -33,12 +52,7 @@ public class PlayerController : MonoBehaviour
     {
         joystickLook = context.ReadValue<Vector2>();
     }
-
-    //public void Fire(InputAction.CallbackContext context)
-    //{
-        //Debug.Log("Pew");
-    //}
-
+   
     void Start() 
     {
         currentSpeed = walkingMoveSpeed;
@@ -118,7 +132,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(movement * currentSpeed * Time.deltaTime, Space.World);
     }
 
-void MoveSpeedSwitch()
+    void MoveSpeedSwitch()
     {
         if(Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -128,5 +142,10 @@ void MoveSpeedSwitch()
         {
             currentSpeed = walkingMoveSpeed;
         }        
+    }
+
+    private void Fire(InputAction.CallbackContext context)
+    {
+       Debug.Log("Pew pew");
     }
 }
