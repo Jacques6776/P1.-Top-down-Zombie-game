@@ -17,27 +17,6 @@ public class PlayerController : MonoBehaviour
     float currentSpeed;
     Vector2 move;
 
-    private InputAction fire;
-
-    public PlayerInputManager playerControls;
-
-    void Awake() 
-    {
-        playerControls = new PlayerInputManager();
-    }
-
-    void OnEnable() 
-    {
-        fire = playerControls.Player.Fire;
-        fire.Enable();
-        fire.performed += Fire;
-    }
-
-    void OnDisable() 
-    {
-        fire.Disable();
-    }
-
     public void OnMove(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
@@ -142,10 +121,5 @@ public class PlayerController : MonoBehaviour
         {
             currentSpeed = walkingMoveSpeed;
         }        
-    }
-
-    private void Fire(InputAction.CallbackContext context)
-    {
-       Debug.Log("Pew pew");
-    }
+    }    
 }
