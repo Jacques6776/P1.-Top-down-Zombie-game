@@ -1225,6 +1225,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4075956636351951752, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.12
+      objectReference: {fileID: 0}
     - target: {fileID: 7713593566806232489, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1268,6 +1272,38 @@ PrefabInstance:
     - target: {fileID: 8276575151007408749, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336654171487583281, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336654171487583281, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336654171487583281, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.minKillSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336654171487583281, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: TrailModule.dieWithParticles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336654171487583281, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336654171487583281, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336654171487583281, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.m_Planes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336654171487583281, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -7,13 +7,18 @@ using UnityEngine.AI;
 public class EnemyController : MonoBehaviour
 {
 
+    //Navigation and detection
     [SerializeField] float chaseRange = 5f;
     [SerializeField] float turnSpeed = 5f;
     NavMeshAgent navMeshAgent;
     
+    //Provoked and distance from target
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
     Transform target;
+
+    //Enemy health
+    int totalEnemyHealth = 3;
     
     void Start()
     {
@@ -64,6 +69,27 @@ public class EnemyController : MonoBehaviour
     private void AttackTarget()
     {
         Debug.Log("You have been attacked");
+    }
+
+    void OnParticleCollision(GameObject other)
+    {
+        ProcessDamageTaken();
+        
+        if(totalEnemyHealth <= 0)
+        {
+            KillEnemy();
+        }
+    }
+
+    void ProcessDamageTaken()
+    {
+        totalEnemyHealth--;
+        Debug.Log("Ouch");
+    }
+
+    void KillEnemy()
+    {
+        Destroy(gameObject);
     }
 
     void OnDrawGizmosSelected() 
