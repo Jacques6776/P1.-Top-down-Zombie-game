@@ -10,12 +10,13 @@ public class GunController : MonoBehaviour
     public PlayerInputManager playerControls;
 
     [SerializeField] GameObject bullet;
-
+    
     void Awake() 
     {
         playerControls = new PlayerInputManager();
     }
 
+    //Firing controll section
     void OnEnable() 
     {
         fire = playerControls.Player.Fire;
@@ -28,19 +29,10 @@ public class GunController : MonoBehaviour
         fire.Disable();
     }
    
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void Fire(InputAction.CallbackContext context)
     {
        bullet.GetComponent<ParticleSystem>().Play();
     }
+
+    //Ammo controll section
 }
