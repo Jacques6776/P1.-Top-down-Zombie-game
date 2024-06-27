@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 109296127}
   - component: {fileID: 109296126}
   - component: {fileID: 109296125}
+  - component: {fileID: 109296128}
   m_Layer: 0
   m_Name: PistolAmmo
   m_TagString: Untagged
@@ -262,6 +263,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 109296123}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &109296128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109296123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e8fde37daf02841ab3799fca489760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoIncreaseAmount: 5
+  ammoType: 0
 --- !u!1 &119302852
 GameObject:
   m_ObjectHideFlags: 3
@@ -369,6 +384,7 @@ GameObject:
   - component: {fileID: 135488293}
   - component: {fileID: 135488292}
   - component: {fileID: 135488291}
+  - component: {fileID: 135488294}
   m_Layer: 0
   m_Name: ShotgunAmmo
   m_TagString: Untagged
@@ -462,6 +478,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 135488289}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &135488294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 135488289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e8fde37daf02841ab3799fca489760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoIncreaseAmount: 5
+  ammoType: 1
 --- !u!1 &179029173
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,6 +504,7 @@ GameObject:
   - component: {fileID: 179029177}
   - component: {fileID: 179029176}
   - component: {fileID: 179029175}
+  - component: {fileID: 179029178}
   m_Layer: 0
   m_Name: RifleAmmo
   m_TagString: Untagged
@@ -567,6 +598,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 179029173}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &179029178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179029173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e8fde37daf02841ab3799fca489760, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ammoIncreaseAmount: 5
+  ammoType: 2
 --- !u!1 &282969321
 GameObject:
   m_ObjectHideFlags: 0
