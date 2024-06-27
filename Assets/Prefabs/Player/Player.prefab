@@ -375,6 +375,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 221a7134528d2cd4f96228f575501409, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 221a7134528d2cd4f96228f575501409, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 221a7134528d2cd4f96228f575501409, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 221a7134528d2cd4f96228f575501409, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 221a7134528d2cd4f96228f575501409, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389964146461256791, guid: 221a7134528d2cd4f96228f575501409, type: 3}
+      propertyPath: ammoType
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -393,6 +417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 390531462843638087}
     m_Modifications:
+    - target: {fileID: 3414049320871356, guid: af199112b12fb944184b42757614681f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.15
+      objectReference: {fileID: 0}
     - target: {fileID: 2364073370623960415, guid: af199112b12fb944184b42757614681f, type: 3}
       propertyPath: m_Name
       value: Pistol
@@ -436,6 +464,22 @@ PrefabInstance:
     - target: {fileID: 3299744449142037311, guid: af199112b12fb944184b42757614681f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: af199112b12fb944184b42757614681f, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: af199112b12fb944184b42757614681f, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: af199112b12fb944184b42757614681f, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: af199112b12fb944184b42757614681f, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -502,6 +546,30 @@ PrefabInstance:
     - target: {fileID: 3299744449142037311, guid: 1f4da0835a720144bad889f5ea1c2604, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 1f4da0835a720144bad889f5ea1c2604, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 1f4da0835a720144bad889f5ea1c2604, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 1f4da0835a720144bad889f5ea1c2604, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 1f4da0835a720144bad889f5ea1c2604, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5417033432396524037, guid: 1f4da0835a720144bad889f5ea1c2604, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389964146461256791, guid: 1f4da0835a720144bad889f5ea1c2604, type: 3}
+      propertyPath: ammoType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -11,6 +11,9 @@ public class GunController : MonoBehaviour
 
     [SerializeField] GameObject bullet;
     
+    [SerializeField] AmmoType ammoType;
+    [SerializeField] AmmoController ammoSlot;
+    
     void Awake() 
     {
         playerControls = new PlayerInputManager();
@@ -29,10 +32,12 @@ public class GunController : MonoBehaviour
         fire.Disable();
     }
    
-    private void Fire(InputAction.CallbackContext context)
+    public void Fire(InputAction.CallbackContext context)
     {
-       bullet.GetComponent<ParticleSystem>().Play();
+        if(ammoSlot.GetCurrentAmmo(ammoType) > 0)
+        {
+            bullet.GetComponent<ParticleSystem>().Play();
+            ammoSlot.ReduceCurrentAmmo(ammoType);
+        }
     }
-
-    //Ammo controll section
 }
