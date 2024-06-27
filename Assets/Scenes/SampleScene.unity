@@ -1234,7 +1234,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1653487749469975057, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653487749469975057, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
       propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653487749469975057, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2150985002178875028, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
@@ -1254,7 +1262,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6221439843335129295, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.m_Bounce.scalar
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221439843335129295, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
       propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6221439843335129295, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: CollisionModule.m_EnergyLossOnCollision.scalar
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6267004403349995821, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
