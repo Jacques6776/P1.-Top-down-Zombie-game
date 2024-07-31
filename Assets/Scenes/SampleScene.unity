@@ -1364,30 +1364,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092459196}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1300658056 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 684867638809220728, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-  m_PrefabInstance: {fileID: 3597892119802250502}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1300658059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300658056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745e490ca49ad25489a9ba3c52a3527e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ammoSlots:
-  - ammoType: 0
-    ammoAmount: 10
-  - ammoType: 2
-    ammoAmount: 5
-  - ammoType: 1
-    ammoAmount: 3
 --- !u!1 &1329142833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1466,6 +1442,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1583317367 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1783503642662614845, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+  m_PrefabInstance: {fileID: 3597892119802250502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1842571551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1575,6 +1556,11 @@ Transform:
   - {fileID: 119302853}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1902118954 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8264448298443640598, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+  m_PrefabInstance: {fileID: 3597892119802250502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2919091359108176143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1623,10 +1609,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6540942873611089802, guid: 1811100f94d1c1e498659315327a8546, type: 3}
-      propertyPath: m_StoppingDistance
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6574413831172287053, guid: 1811100f94d1c1e498659315327a8546, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -1644,42 +1626,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2123434754440103798, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2150985002178875028, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3467481915487498263, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3508543459989830133, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 4274224257342698563, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: ammoSlot
+      propertyPath: bullet
       value: 
-      objectReference: {fileID: 1300658059}
-    - target: {fileID: 4274224257342698563, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: ammoType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4403135382805597815, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4446519114321315733, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6760840251753823656, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1902118954}
     - target: {fileID: 7713593566806232489, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1720,41 +1670,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8076213604281172779, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8276575151007408749, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 8276575151007408749, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8888866811406616447, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: ammoSlot
-      value: 
-      objectReference: {fileID: 1300658059}
     - target: {fileID: 8932248412416970397, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: ammoSlot
+      propertyPath: bullet
       value: 
-      objectReference: {fileID: 1300658059}
+      objectReference: {fileID: 1583317367}
     - target: {fileID: 8932248412416970397, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
       propertyPath: ammoType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9012148537738575179, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 684867638809220728, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1300658059}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
     Transform target;
 
     //Enemy health
-    int totalEnemyHealth = 3;
+    [SerializeField] int totalEnemyHealth = 3;
     
     void Start()
     {
