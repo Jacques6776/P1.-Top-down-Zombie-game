@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.InputSystem;
 
 public class GunController : MonoBehaviour
@@ -13,10 +14,23 @@ public class GunController : MonoBehaviour
     
     [SerializeField] AmmoType ammoType;
     [SerializeField] AmmoController ammoSlot;
+
+    [SerializeField] TextMeshProUGUI ammoText;
     
     void Awake() 
     {
         playerControls = new PlayerInputManager();
+    }
+
+    private void Update() 
+    {
+        DisplayAmmo();
+    }
+
+    private void DisplayAmmo()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
+        ammoText.text = currentAmmo.ToString();
     }
 
     //Firing controll section
