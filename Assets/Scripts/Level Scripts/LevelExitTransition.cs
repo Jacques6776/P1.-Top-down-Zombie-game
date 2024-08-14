@@ -16,12 +16,16 @@ public class LevelExitTransition : MonoBehaviour
         exitPrompt.enabled = false;
     }
 
+    private void Update() 
+    {
+        ExitLevelInteraction();
+    }
+
     private void OnTriggerEnter(Collider other) 
     {
         if(other.CompareTag("Player"))
         {
             isAtExit = true;
-            ExitLevelInteraction();
         }        
     }
 
@@ -30,25 +34,18 @@ public class LevelExitTransition : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             isAtExit = false;
-            ExitLevelInteraction();
         }     
     }
 
     private void ExitLevelInteraction()
     {
-        if(isAtExit)
-        {
-            exitPrompt.enabled = true;
-        }
-        else if(!isAtExit)//ask about true and false
-        {
-            exitPrompt.enabled = false;
-        }
+        
+        exitPrompt.enabled = isAtExit;
 
-        if(Input.GetKeyDown(KeyCode.E) && isAtExit)
+        if(isAtExit && Input.GetKey(KeyCode.E)) //do fastest check first
         {
-            Debug.Log("Was pressed");
-            //LoadNextLevel();
+            //Debug.Log("Was pressed");
+            LoadNextLevel();
         }
     }
 
