@@ -17,6 +17,9 @@ public class PlayerController : MonoBehaviour
     float currentSpeed;
     Vector2 move;
 
+    [Header("Player Health")]
+    [SerializeField] int playerHitPoints = 100;
+
     public void OnMove(InputAction.CallbackContext context)
     {
         move = context.ReadValue<Vector2>();
@@ -121,5 +124,16 @@ public class PlayerController : MonoBehaviour
         {
             currentSpeed = walkingMoveSpeed;
         }        
-    }    
+    }
+
+    public void PlayerTakesDamage(int damage)
+    {
+        playerHitPoints -= damage;
+
+        if(playerHitPoints <= 0)
+        {
+            Debug.Log("You are dead");
+        }
+    }
+
 }

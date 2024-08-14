@@ -19,10 +19,15 @@ public class EnemyController : MonoBehaviour
 
     //Enemy health
     [SerializeField] int totalEnemyHealth = 3;
+
+    //Attack damage
+    [SerializeField] int damage = 50;
+    PlayerController targetHealth;
     
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        targetHealth = FindObjectOfType<PlayerController>();
         target = FindObjectOfType<PlayerController>().transform;
     }
 
@@ -66,9 +71,10 @@ public class EnemyController : MonoBehaviour
         navMeshAgent.SetDestination(target.position);
     }
 
-    private void AttackTarget()
+    public void AttackTarget()
     {
-        Debug.Log("You have been attacked");
+        targetHealth.PlayerTakesDamage(damage);
+        //Debug.Log("You have been attacked");
     }
 
     void OnParticleCollision(GameObject other)
