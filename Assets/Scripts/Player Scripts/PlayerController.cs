@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Health")]
     [SerializeField] int playerHitPoints = 100;
+    [SerializeField] TextMeshProUGUI displayedHealth;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -44,6 +46,7 @@ public class PlayerController : MonoBehaviour
     {
         RotationDetection();
         MoveSpeedSwitch();
+        DisplayPlayerHealth();
     }
 
     void RotationDetection()
@@ -134,6 +137,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("You are dead");
         }
+    }
+
+    public void DisplayPlayerHealth()
+    {
+        displayedHealth.text = playerHitPoints.ToString();
     }
 
 }
