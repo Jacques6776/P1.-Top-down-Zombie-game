@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 2716002655114140463}
   - component: {fileID: 6540942873611089802}
   - component: {fileID: 1179772415785695116}
+  - component: {fileID: 3032108940544305749}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -358,3 +359,25 @@ MonoBehaviour:
   chaseRange: 5
   turnSpeed: 5
   totalEnemyHealth: 3
+  damage: 50
+--- !u!95 &3032108940544305749
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6574413831172287053}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bd4d0aaa7a51a934eadf7caf9cfe46d6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -68,13 +68,19 @@ public class EnemyController : MonoBehaviour
 
     private void ChaseTarget()
     {
+        GetComponent<Animator>().SetBool("Attack", false);
+        GetComponent<Animator>().SetTrigger("Move");
         navMeshAgent.SetDestination(target.position);
     }
 
-    public void AttackTarget()
+    private void AttackTarget()
+    {
+        GetComponent<Animator>().SetBool("Attack", true);        
+    }
+
+    public void DamagePlayer()
     {
         targetHealth.PlayerTakesDamage(damage);
-        //Debug.Log("You have been attacked");
     }
 
     void OnParticleCollision(GameObject other)
