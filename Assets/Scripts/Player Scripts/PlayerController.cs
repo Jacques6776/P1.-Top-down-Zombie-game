@@ -4,6 +4,7 @@ using TMPro;
 using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,7 +21,12 @@ public class PlayerController : MonoBehaviour
 
     [Header("Player Health")]
     [SerializeField] int playerHitPoints = 100;
-    [SerializeField] TextMeshProUGUI displayedHealth;
+    [SerializeField] Slider healthBar;
+    //[SerializeField] TextMeshProUGUI displayedHealth;
+
+    [Header("Player Death Canvas")]
+    [SerializeField] Canvas gameOverCanvas;
+    [SerializeField] GameObject playerAvatar;
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -40,6 +46,7 @@ public class PlayerController : MonoBehaviour
     void Start() 
     {
         currentSpeed = walkingMoveSpeed;
+        gameOverCanvas.enabled = false;
     }
 
     void Update()
@@ -135,13 +142,21 @@ public class PlayerController : MonoBehaviour
 
         if(playerHitPoints <= 0)
         {
-            Debug.Log("You are dead");
+            PlayerHasDied();
         }
     }
 
-    public void DisplayPlayerHealth()
+    private void DisplayPlayerHealth()
     {
-        displayedHealth.text = playerHitPoints.ToString();
+        healthBar.value = playerHitPoints;
+        //displayedHealth.text = playerHitPoints.ToString();
+    }
+
+    private void PlayerHasDied()
+    {
+        isMouseRotation = false;
+        gameOverCanvas.enabled = true;
+        Time.timeScale = 0;
     }
 
 }
