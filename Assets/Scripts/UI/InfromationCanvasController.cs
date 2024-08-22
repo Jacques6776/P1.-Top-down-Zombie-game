@@ -5,13 +5,13 @@ using TMPro;
 
 public class InfromationCanvasController : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI displayText;
+    [SerializeField] GameObject displayText;
     
     private void OnTriggerEnter(Collider other) 
     {
         if(other.CompareTag("Player"))
         {
-            displayText.enabled = true;
+            displayText.SetActive(true);
         }
     }
 
@@ -19,7 +19,7 @@ public class InfromationCanvasController : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            displayText.enabled = false;//try the destroy version as well
+            displayText.SetActive(false);//try the destroy version as well
             Destroy(this.gameObject);
         }
     }
