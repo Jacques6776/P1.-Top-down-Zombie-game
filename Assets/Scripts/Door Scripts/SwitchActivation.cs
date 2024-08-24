@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class SwitchActivation : MonoBehaviour
 {
-    [SerializeField] GameObject objectForActivation;
+    [SerializeField] GameObject[] objectForActivation;
     
     private void OnTriggerEnter(Collider other) 
     {
-        if(other.CompareTag("Player"))
+        foreach(GameObject toActivace in objectForActivation)
         {
-            objectForActivation.SetActive(true);
-            Destroy(this.gameObject);
+            toActivace.SetActive(true);
         }
     }
 
