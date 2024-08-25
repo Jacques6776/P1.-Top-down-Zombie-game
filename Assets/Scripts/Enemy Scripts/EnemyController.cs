@@ -96,7 +96,7 @@ public class EnemyController : MonoBehaviour
     void ProcessDamageTaken()
     {
         totalEnemyHealth--;
-        Debug.Log("Ouch");
+        ChaseTarget();
     }
 
     void KillEnemy()
