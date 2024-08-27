@@ -30,7 +30,7 @@ public class GunController : MonoBehaviour
     private void DisplayAmmo()
     {
         int currentAmmo = ammoSlot.GetCurrentAmmo(ammoType);
-        ammoText.text = currentAmmo.ToString();
+        ammoText.text = ammoType + ": " + currentAmmo.ToString();
     }
 
     //Firing controll section
