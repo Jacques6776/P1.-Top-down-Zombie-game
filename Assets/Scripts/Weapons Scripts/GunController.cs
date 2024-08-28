@@ -16,6 +16,8 @@ public class GunController : MonoBehaviour
     [SerializeField] AmmoController ammoSlot;
 
     [SerializeField] TextMeshProUGUI ammoText;
+
+    [SerializeField] AudioSource fireAudio;
     
     void Awake() 
     {
@@ -51,6 +53,7 @@ public class GunController : MonoBehaviour
         if(ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
             bullet.GetComponent<ParticleSystem>().Play();
+            fireAudio.Play();
             ammoSlot.ReduceCurrentAmmo(ammoType);
         }
     }
