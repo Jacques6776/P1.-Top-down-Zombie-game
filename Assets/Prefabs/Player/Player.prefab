@@ -812,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 4928921643794725337}
     - target: {fileID: 7389964146461256791, guid: 221a7134528d2cd4f96228f575501409, type: 3}
       propertyPath: ammoType
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -1299,7 +1299,7 @@ PrefabInstance:
       objectReference: {fileID: 4928921643794725337}
     - target: {fileID: 7389964146461256791, guid: 1f4da0835a720144bad889f5ea1c2604, type: 3}
       propertyPath: ammoType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

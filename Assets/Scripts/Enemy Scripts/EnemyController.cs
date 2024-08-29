@@ -19,20 +19,27 @@ public class EnemyController : MonoBehaviour
 
     //Enemy health
     [SerializeField] int totalEnemyHealth = 3;
+    
+    [SerializeField] bool isDead = false;
 
     //Attack damage
     [SerializeField] int damage = 50;
     PlayerController targetHealth;
     
-    void Start()
+    private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         targetHealth = FindObjectOfType<PlayerController>();
         target = FindObjectOfType<PlayerController>().transform;
     }
 
-    void Update()
+    private void Update()
     {
+        if(isDead)
+        {
+            enabled = false;
+            navMeshAgent.enabled = false;
+        }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
 
         if(isProvoked)
@@ -45,7 +52,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void EngageTarget()
+    private void EngageTarget()
     {
         FaceTarget();
 
@@ -59,7 +66,7 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void FaceTarget()
+    private void FaceTarget()
     {
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
@@ -83,7 +90,7 @@ public class EnemyController : MonoBehaviour
         targetHealth.PlayerTakesDamage(damage);
     }
 
-    void OnParticleCollision(GameObject other)
+    private void OnParticleCollision(GameObject other)
     {
         ProcessDamageTaken();
         
@@ -93,18 +100,20 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    void ProcessDamageTaken()
+    private void ProcessDamageTaken()
     {
         totalEnemyHealth--;
         ChaseTarget();
     }
 
-    void KillEnemy()
+    private void KillEnemy()
     {
-        Destroy(gameObject);
+        if(isDead) return;
+        GetComponent<Animator>().SetTrigger("die");
+        isDead = true;
     }
 
-    void OnDrawGizmosSelected() 
+    private void OnDrawGizmosSelected() 
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, chaseRange);
