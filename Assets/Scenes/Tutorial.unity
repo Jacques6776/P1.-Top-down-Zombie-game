@@ -2649,7 +2649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0df78fe53e1a4341a3c2595a630ddf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myLight: {fileID: 0}
+  myLight: {fileID: 179127755}
   maxInterval: 0.5
   maxFlicker: 0.5
 --- !u!1001 &189020251
@@ -3665,6 +3665,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 684867638809220728, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1454598998551113407, guid: 15f53abe737e02b47a5a1adb98f5d289, type: 3}
       propertyPath: healthBar
       value: 
@@ -9838,7 +9842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0df78fe53e1a4341a3c2595a630ddf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myLight: {fileID: 0}
+  myLight: {fileID: 747651452}
   maxInterval: 2
   maxFlicker: 0.1
 --- !u!108 &747651452
@@ -10880,7 +10884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0df78fe53e1a4341a3c2595a630ddf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myLight: {fileID: 0}
+  myLight: {fileID: 781638481}
   maxInterval: 1
   maxFlicker: 0.2
 --- !u!1 &793030859 stripped
@@ -14111,7 +14115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0df78fe53e1a4341a3c2595a630ddf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myLight: {fileID: 0}
+  myLight: {fileID: 1020935691}
   maxInterval: 2
   maxFlicker: 0.1
 --- !u!1001 &1038135334
@@ -29032,7 +29036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5937579241855760128, guid: 727cd807625333642bd7a2b9ba24f1b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

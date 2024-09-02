@@ -25,6 +25,11 @@ public class EnemyController : MonoBehaviour
     //Attack damage
     [SerializeField] int damage = 50;
     PlayerController targetHealth;
+
+    //Zombie Audio
+    //[SerializeField] AudioSource zombieEngageSound;
+    [SerializeField] GameObject zombieEngageSound;
+    [SerializeField] AudioSource zombieAttackSound;
     
     private void Start()
     {
@@ -38,7 +43,8 @@ public class EnemyController : MonoBehaviour
         if(isDead)
         {
             enabled = false;
-            navMeshAgent.enabled = false;
+            zombieEngageSound.SetActive(false);
+            navMeshAgent.enabled = false;            
         }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
 
@@ -55,7 +61,7 @@ public class EnemyController : MonoBehaviour
     private void EngageTarget()
     {
         FaceTarget();
-
+       
         if(distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
@@ -68,25 +74,29 @@ public class EnemyController : MonoBehaviour
 
     private void FaceTarget()
     {
+        //zombieEngageSound.Play();
         Vector3 direction = (target.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed);
     }
 
     private void ChaseTarget()
-    {
+    {          
+        //zombieEngageSound.Play(); This is where it makes sense
+        zombieEngageSound.SetActive(true);
         GetComponent<Animator>().SetBool("Attack", false);
         GetComponent<Animator>().SetTrigger("Move");
         navMeshAgent.SetDestination(target.position);
     }
 
     private void AttackTarget()
-    {
-        GetComponent<Animator>().SetBool("Attack", true);        
+    {           
+        GetComponent<Animator>().SetBool("Attack", true);
     }
 
     public void DamagePlayer()
-    {
+    {        
+        zombieAttackSound.Play();
         targetHealth.PlayerTakesDamage(damage);
     }
 
@@ -108,9 +118,10 @@ public class EnemyController : MonoBehaviour
 
     private void KillEnemy()
     {
+        zombieEngageSound.SetActive(false);
         if(isDead) return;
         GetComponent<Animator>().SetTrigger("die");
-        isDead = true;
+        isDead = true;        
     }
 
     private void OnDrawGizmosSelected() 
