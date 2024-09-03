@@ -42,9 +42,9 @@ public class EnemyController : MonoBehaviour
     {
         if(isDead)
         {
-            enabled = false;
+            enabled = false;            
+            navMeshAgent.enabled = false;
             zombieEngageSound.SetActive(false);
-            navMeshAgent.enabled = false;            
         }
         distanceToTarget = Vector3.Distance(target.position, transform.position);
 
